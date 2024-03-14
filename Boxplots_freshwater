@@ -113,3 +113,62 @@ g.fango <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$fango)
   xlab("")
 g.fango
 ###################################
+#################
+##LARGHEZZA
+
+larghezza <- read_xlsx("Larghezza.xlsx", col_names = T)
+
+g.larghezza <- ggplot(larghezza, aes(x=as.factor(larghezza$Zone), y=larghezza$Width)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Larghezza") +
+  xlab("")
+g.larghezza
+
+#########################################
+############################
+##PENDENZA
+
+pendenza <- read_xlsx("Pendenza.xlsx", col_names = T)
+
+g.pendenza <- ggplot(pendenza, aes(x=as.factor(pendenza$Zone), y=pendenza$Slope)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Pendenza") +
+  xlab("")
+g.pendenza
+
+##################################
+###############################
+##ELEVATION
+
+elevation <- read_xlsx("Elevation.xlsx", col_names = T)
+
+g.elevation <- ggplot(elevation, aes(x=as.factor(elevation$Zone), y=elevation$Quota)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Elevation") +
+  xlab("")
+g.elevation
+
+##########################
+####################
+##
