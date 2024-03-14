@@ -1,0 +1,115 @@
+#macrocategeorie boxplot work
+#test
+#internship
+#14/03/24
+
+setwd("C:/Users/User/OneDrive/Desktop/freshwater")
+
+library(readxl)
+library(ggplot2)
+library(hrbrthemes)
+library(viridis)
+
+##############################################
+####SUBSTRATO
+
+substrato <- read_xlsx("substrato-r.xlsx")
+
+g.roccia <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$roccia_scoperta)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Roccia Scoperta") +
+  xlab("")
+g.roccia
+
+#########################
+
+g.massi <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$massi)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Massi") +
+  xlab("")
+g.massi
+
+#############################
+g.sassi <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$sassi)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Sassi") +
+  xlab("")
+g.sassi
+
+#########################
+g.ciottoli <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$ciottoli)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Ciottoli") +
+  xlab("")
+g.ciottoli
+
+###################
+g.ghiaia <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$ghiaia)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Ghiaia") +
+  xlab("")
+g.ghiaia
+
+#########################
+g.sabbia <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$sabbia)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Sabbia") +
+  xlab("")
+g.sabbia
+
+########################
+g.fango <- ggplot(substrato, aes(x=as.factor(substrato$zone), y=substrato$fango)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Fango") +
+  xlab("")
+g.fango
+###################################
