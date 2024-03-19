@@ -171,4 +171,91 @@ g.elevation
 
 ##########################
 ####################
-##
+##MESOHABITAT
+
+meso <- read_xlsx("Mesohabitat.xlsx", col_names = T)
+
+g.cascate <- ggplot(meso, aes(x=as.factor(meso$Zone), y=meso$cascate)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Cascate") +
+  xlab("")
+g.cascate
+
+####################################
+
+g.salti <- ggplot(meso, aes(x=as.factor(meso$Zone), y=meso$salti)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Salti") +
+  xlab("")
+g.salti
+
+#######################################
+g.saltelli <- ggplot(meso, aes(x=as.factor(meso$Zone), y=meso$saltelli)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Saltelli") +
+  xlab("")
+g.saltelli
+
+#######################################
+g.rifle <- ggplot(meso, aes(x=as.factor(meso$Zone), y=meso$rifle)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Rifle") +
+  xlab("")
+g.rifle
+
+#######################################
+g.pool <- ggplot(meso, aes(x=as.factor(meso$Zone), y=meso$pool)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Pool") +
+  xlab("")
+g.pool
+
+#####################################
+g.run <- ggplot(meso, aes(x=as.factor(meso$Zone), y=meso$run)) +
+  geom_boxplot() +
+  scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+  geom_jitter(color="black", size=0.4, alpha=0.9) +
+  theme_ipsum() +
+  theme(
+    legend.position="none",
+    plot.title = element_text(size=11)
+  ) +
+  ggtitle("Run") +
+  xlab("")
+g.run
+
